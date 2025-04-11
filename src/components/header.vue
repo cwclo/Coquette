@@ -1,23 +1,22 @@
 <template>
   <header
-    class="absolute top-0 left-0 w-full z-50 px-6 md:px-12 py-8 flex justify-between items-center"
+    class="absolute bg-gray-300 top-0 left-0 w-full z-50 px-6 md:px-12 py-6 md:py-8 pb-8 flex justify-between items-center"
   >
     <!-- Logo -->
-    <img src="/images/logo.svg" alt="Sunnyside Logo" class="w-32 md:w-40" />
+    <img
+      src="/images/logos/coquette_logo_noir.png"
+      alt="Logo Coquette"
+      class="w-24 md:w-32 h-auto"
+    />
 
     <!-- Desktop Nav -->
     <nav
       class="hidden md:flex space-x-10 items-center text-white font-semibold"
     >
-      <NavLink href="#about">About</NavLink>
-      <NavLink href="#services">Services</NavLink>
-      <NavLink href="#projects">Projects</NavLink>
-      <a
-        href="#contact"
-        class="bg-white text-black px-6 py-2 uppercase rounded-full text-sm hover:bg-opacity-80 transition duration-300"
-      >
-        Contact
-      </a>
+      <NavLink href="#about">À propos</NavLink>
+      <NavLink href="#gallery">Galerie</NavLink>
+      <NavLink href="#reserve">Réserver</NavLink>
+      <NavLink href="#contact">Nous joindre</NavLink>
     </nav>
 
     <!-- Mobile Hamburger -->
@@ -71,23 +70,23 @@
         </NavLink>
 
         <NavLink
-          href="#services"
+          href="#gallery"
           @click="closeMenu"
           baseColor="text-[#2c7566]"
           underlineColor="bg-[#2c7566]"
           activeClass="text-yellow-500"
         >
-          Services
+          Gallery
         </NavLink>
 
         <NavLink
-          href="#projects"
+          href="#reserve"
           @click="closeMenu"
           baseColor="text-[#2c7566]"
           underlineColor="bg-[#2c7566]"
           activeClass="text-yellow-500"
         >
-          Projects
+          Reserver
         </NavLink>
 
         <a
@@ -95,11 +94,12 @@
           @click="closeMenu"
           class="bg-yellow-400 text-white px-6 py-2 uppercase rounded-full text-sm hover:bg-yellow-500"
         >
-          Contact
+          Nous joindre
         </a>
       </div>
     </transition>
   </header>
+  <div class="h-32"></div>
 </template>
 
 <script setup>
