@@ -1,5 +1,5 @@
 <template>
-  <section id="reserve" class="bg-black px-6 py-24 md:px-12 text-center">
+  <section id="reserve" class="px-6 py-24 md:px-12 text-center">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-[#2c2c2c] mb-4">
         Réserver une table
@@ -8,12 +8,12 @@
         Viens vivre l'expérience Coquette 🍷<br />
         Réserve ta table en ligne en quelques clics.
       </p>
-      <!-- à remplacer par ton vrai lien -->
+      <!-- Bouton avec style rétro et animation -->
       <a
         href="https://www.opentable.ca/"
         target="_blank"
         rel="noopener"
-        class="inline-block bg-[#df7272] hover:bg-[#c85f5f] text-white text-lg font-semibold px-8 py-3 rounded-full transition duration-300 shadow-md hover:scale-105"
+        class="inline-block bg-gradient-to-r from-[#f4e1d2] to-[#e8c8b7] text-[#2c2c2c] border-2 border-[#2c2c2c] text-lg font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out"
       >
         Réserver maintenant
       </a>

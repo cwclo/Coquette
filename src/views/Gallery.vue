@@ -1,12 +1,10 @@
 <template>
-  <section class="bg-black px-6 py-20 md:px-12" id="gallery">
-    <h2
-      class="text-3xl md:text-4xl font-bold text-gray-400 text-center mb-12 text-[#2c2c2c]"
-    >
-      Galerie
+  <section class="px-6 py-20 md:px-12" id="gallery">
+    <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+      GALERIE
     </h2>
 
-    <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
       <FadeInSection v-for="(img, index) in imagePaths" :key="index">
         <img
           :src="img"
