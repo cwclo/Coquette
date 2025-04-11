@@ -6,17 +6,25 @@
     <img
       src="/images/logos/coquette_logo_noir.png"
       alt="Logo Coquette"
-      class="w-24 md:w-32 h-auto"
+      class="w-20 md:w- h-auto"
     />
 
     <!-- Desktop Nav -->
     <nav
       class="hidden md:flex space-x-10 items-center text-white font-semibold"
     >
-      <NavLink href="#about">À propos</NavLink>
-      <NavLink href="#gallery">Galerie</NavLink>
-      <NavLink href="#reserve">Réserver</NavLink>
-      <NavLink href="#contact">Nous joindre</NavLink>
+      <NavLink href="#about" class="text-sm md:text-base lg:text-lg">
+        À propos
+      </NavLink>
+      <NavLink href="#gallery" class="text-sm md:text-base lg:text-lg">
+        Galerie
+      </NavLink>
+      <NavLink href="#reserve" class="text-sm md:text-base lg:text-lg">
+        Réserver
+      </NavLink>
+      <NavLink href="#contact" class="text-sm md:text-base lg:text-lg">
+        Nous joindre
+      </NavLink>
     </nav>
 
     <!-- Mobile Hamburger -->
@@ -65,6 +73,7 @@
           baseColor="text-[#2c7566]"
           underlineColor="bg-[#2c7566]"
           activeClass="text-yellow-500"
+          class="text-base md:text-lg"
         >
           About
         </NavLink>
@@ -75,6 +84,7 @@
           baseColor="text-[#2c7566]"
           underlineColor="bg-[#2c7566]"
           activeClass="text-yellow-500"
+          class="text-base md:text-lg"
         >
           Gallery
         </NavLink>
@@ -85,6 +95,7 @@
           baseColor="text-[#2c7566]"
           underlineColor="bg-[#2c7566]"
           activeClass="text-yellow-500"
+          class="text-base md:text-lg"
         >
           Reserver
         </NavLink>
@@ -99,9 +110,7 @@
       </div>
     </transition>
   </header>
-  <div class="h-32"></div>
 </template>
-
 <script setup>
 import { ref } from "vue";
 import NavLink from "./NavLink.vue";

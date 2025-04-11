@@ -1,9 +1,9 @@
 <template>
-  <footer class="bg-gray-300 text-[#2c7566] text-center py-16 px-4">
+  <footer class="bg-gray-300 text-[#2c7566] text-center py-10">
     <!-- Logo -->
-    <div class="mb-8">
+    <div class="mb-4">
       <img
-        src="/images/logo.svg"
+        src="/images/logos/coquette_logo_noir.png"
         alt="Sunnyside Logo"
         class="mx-auto w-32 fill-current"
       />
