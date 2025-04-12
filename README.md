@@ -23,8 +23,6 @@ Pensé pour être **léger, modulaire et réutilisable** dans différents projet
 ### 1. Cloner le projet
 
 ```bash
-git clone https://github.com/cwclo/SunnyV.git
-cd SunnyV
 npm install
 npm run dev
 ````
