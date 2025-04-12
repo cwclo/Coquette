@@ -23,7 +23,7 @@
           </p>
 
           <div>
-            <p class="text-gray-800 font-medium">📞 (418)-123-4567</p>
+            <p class="text-gray-800 font-medium">📞 (418) 123-4567</p>
             <p class="text-gray-800 font-medium">✉️ info@coquette.ca</p>
           </div>
 
