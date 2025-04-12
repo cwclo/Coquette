@@ -1,6 +1,8 @@
 <template>
   <section class="px-6 py-20 md:px-12" id="gallery">
-    <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+    <h2
+      class="text-3xl md:text-4xl font-bold text-white text-center mb-12 section-scroll-offset"
+    >
       GALERIE
     </h2>
 

@@ -1,41 +1,33 @@
 <template>
   <header
-    class="absolute bg-gray-300 top-0 left-0 w-full z-50 px-6 md:px-12 py-6 md:py-8 pb-8 flex justify-between items-center"
+    class="sticky top-0 left-0 w-full z-50 px-4 md:px-8 py-3 md:py-4 flex justify-between items-center bg-black/80 backdrop-blur-lg shadow-md"
   >
     <!-- Logo -->
     <img
-      src="/images/logos/coquette_logo_noir.png"
+      src="/images/logos/coquette_logo_rose.png"
       alt="Logo Coquette"
-      class="w-20 md:w- h-auto"
+      class="w-14 md:w-16 h-auto object-contain"
     />
 
     <!-- Desktop Nav -->
     <nav
-      class="hidden md:flex space-x-10 items-center text-white font-semibold"
+      class="hidden md:flex space-x-8 items-center font-semibold text-sm md:text-base text-[#2c2c2c]"
     >
-      <NavLink href="#about" class="text-sm md:text-base lg:text-lg">
-        À propos
-      </NavLink>
-      <NavLink href="#gallery" class="text-sm md:text-base lg:text-lg">
-        Galerie
-      </NavLink>
-      <NavLink href="#reserve" class="text-sm md:text-base lg:text-lg">
-        Réserver
-      </NavLink>
-      <NavLink href="#contact" class="text-sm md:text-base lg:text-lg">
-        Nous joindre
-      </NavLink>
+      <NavLink href="#about">À propos</NavLink>
+      <NavLink href="#gallery">Galerie</NavLink>
+      <NavLink href="#reserve">Réserver</NavLink>
+      <NavLink href="#contact">Nous joindre</NavLink>
     </nav>
 
     <!-- Mobile Hamburger -->
-    <button @click="toggleMenu" class="md:hidden z-50 relative">
+    <button v-if="!isOpen" @click="toggleMenu" class="md:hidden z-50 mr-2">
       <img src="/images/icon-hamburger.svg" alt="Menu" class="w-6 h-6" />
     </button>
 
-    <!-- Overlay to close on outside click -->
+    <!-- Overlay -->
     <div
       v-if="isOpen"
-      class="fixed inset-0 bg-black/30 z-30"
+      class="fixed inset-0 bg-black/40 z-40"
       @click="closeMenu"
     ></div>
 
@@ -43,12 +35,12 @@
     <transition name="slide">
       <div
         v-if="isOpen"
-        class="fixed top-0 right-0 w-2/3 h-full bg-white text-[#2c7566] flex flex-col items-center justify-center gap-8 font-semibold text-lg shadow-2xl z-40"
+        class="fixed top-0 right-0 h-screen w-[70%] bg-black/80 text-[#2c7566] flex flex-col items-center justify-center gap-8 font-semibold text-lg shadow-2xl z-[50] pt-20 px-6"
       >
         <!-- Close Button -->
         <button
           @click="closeMenu"
-          class="absolute top-6 right-6 text-[#2c7566] hover:text-yellow-400 z-50"
+          class="absolute top-6 right-6 text-[#d18181] hover:text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -66,61 +58,30 @@
           </svg>
         </button>
 
-        <!-- Mobile Links -->
-        <NavLink
-          href="#about"
-          @click="closeMenu"
-          baseColor="text-[#2c7566]"
-          underlineColor="bg-[#2c7566]"
-          activeClass="text-yellow-500"
-          class="text-base md:text-lg"
-        >
-          About
-        </NavLink>
-
-        <NavLink
-          href="#gallery"
-          @click="closeMenu"
-          baseColor="text-[#2c7566]"
-          underlineColor="bg-[#2c7566]"
-          activeClass="text-yellow-500"
-          class="text-base md:text-lg"
-        >
-          Gallery
-        </NavLink>
-
-        <NavLink
-          href="#reserve"
-          @click="closeMenu"
-          baseColor="text-[#2c7566]"
-          underlineColor="bg-[#2c7566]"
-          activeClass="text-yellow-500"
-          class="text-base md:text-lg"
-        >
-          Reserver
-        </NavLink>
-
+        <!-- Mobile NavLinks -->
+        <NavLink href="#about" @click="closeMenu">À propos</NavLink>
+        <NavLink href="#gallery" @click="closeMenu">Galerie</NavLink>
+        <NavLink href="#reserve" @click="closeMenu">Réserver</NavLink>
         <a
           href="#contact"
           @click="closeMenu"
-          class="bg-yellow-400 text-white px-6 py-2 uppercase rounded-full text-sm hover:bg-yellow-500"
+          class="bg-[#d18181] text-[#2c2c2c] px-6 py-2 rounded-full tracking-wide font-title text-sm shadow-md hover:bg-white transition duration-300"
         >
-          Nous joindre
+          NOUS JOINDRE
         </a>
       </div>
     </transition>
   </header>
 </template>
+
 <script setup>
 import { ref } from "vue";
 import NavLink from "./NavLink.vue";
 
 const isOpen = ref(false);
-
 function toggleMenu() {
   isOpen.value = !isOpen.value;
 }
-
 function closeMenu() {
   isOpen.value = false;
 }

@@ -2,7 +2,7 @@
   <section id="contact" class="px-6 py-20 md:px-12">
     <div class="max-w-6xl mx-auto">
       <h2
-        class="text-3xl md:text-4xl font-bold text-center mb-4 text-[#2c2c2c]"
+        class="text-3xl md:text-4xl font-bold text-center mb-4 text-[#2c2c2c] section-scroll-offset"
       >
         Nous joindre
       </h2>

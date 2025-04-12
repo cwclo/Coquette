@@ -1,6 +1,6 @@
 <template>
   <section id="reserve" class="px-6 py-24 md:px-12 text-center">
-    <div class="max-w-3xl mx-auto">
+    <div class="max-w-3xl mx-auto section-scroll-offset">
       <h2 class="text-3xl md:text-4xl font-bold text-[#2c2c2c] mb-4">
         Réserver une table
       </h2>

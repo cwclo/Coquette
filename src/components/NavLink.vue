@@ -19,7 +19,7 @@ const props = defineProps({
   href: String,
   baseColor: {
     type: String,
-    default: "text-white",
+    default: "text-[#d18181]",
   },
   activeClass: {
     type: String,
