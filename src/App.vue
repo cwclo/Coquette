@@ -16,8 +16,8 @@
 </template>
 
 <script setup>
-import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue";
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 import Separator from "./components/Separator.vue";
 import About from "./views/About.vue";
 import Gallery from "./views/Gallery.vue";

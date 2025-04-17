@@ -8,7 +8,7 @@
       </h2>
       <p class="text-center text-gray-500 max-w-xl mx-auto mb-12">
         Tu veux réserver une table, organiser un événement ou simplement nous
-        dire bonjour ? Écris-nous ou passe nous voir 🍷
+        dire bonjour ? Écris-nous ou passe nous voir !🍷
       </p>
 
       <div class="grid md:grid-cols-2 gap-10 items-start">
