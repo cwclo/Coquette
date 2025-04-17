@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: 'Bellefair';
   src: url('/src/assets/Fonts/Bellefair-Regular.ttf') format('truetype');
@@ -12,9 +16,6 @@
   font-style: normal;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer base {
   html {
@@ -22,15 +23,21 @@
   }
 
   body {
-    @apply font-base text-[#2c2c2c];
+    font-family: 'Bellefair', serif;
+    color: #2c2c2c;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-title uppercase tracking-wide;
+    font-family: 'Perandory', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em; /* équivalent de tracking-wide */
   }
 }
+
+/* Optionnel */
 @layer utilities {
   .section-scroll-offset {
-    @apply pt-24 scroll-mt-24;
+    padding-top: 6rem; /* pt-24 = 6rem */
+    scroll-margin-top: 6rem; /* scroll-mt-24 = 6rem */
   }
 }
