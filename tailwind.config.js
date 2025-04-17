@@ -1,8 +1,15 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './index.html',
     './src/**/*.{vue,js,ts,jsx,tsx}',
+  ],
+  safelist: [
+    'bg-red-500',
+    'bg-blue-500',
+    'bg-green-500',
+    'text-white',
+    'text-xl',
+    'p-4',
   ],
   theme: {
     extend: {
@@ -12,9 +19,5 @@ module.exports = {
       },
     },
   },
-  safelist: [
-    'pt-24',
-    'scroll-mt-24',
-  ],
   plugins: [],
 };
