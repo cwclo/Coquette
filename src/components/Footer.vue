@@ -36,6 +36,17 @@
           class="hover:brightness-150"
       /></a>
     </div>
+    <!-- Personal Logo -->
+    <div class="mt-6">
+      <p>Propulsé par</p>
+      <a href="https://google.ca" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/\public\images\logos\CWeb-pink.png"
+          alt="Personal Logo"
+          class="mx-auto w-24 mt-2"
+        />
+      </a>
+    </div>
   </footer>
 </template>
 

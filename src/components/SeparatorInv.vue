@@ -1,11 +1,11 @@
 <template>
-  <div class="relative bg-[#f9f6ec] overflow-hidden">
-    <!-- Motif déco art déco -->
+  <div class="relative bg-[#d7d0b4] overflow-hidden">
+    <!-- Motif déco art déco inversé -->
     <div
-      class="absolute inset-0 flex justify-center items-center pointer-events-none opacity-10"
+      class="absolute inset-0 flex justify-center items-center pointer-events-none opacity-10 rotate-180"
     >
       <svg class="w-1/2 h-24" viewBox="0 0 100 100" fill="none">
-        <g stroke="#2c2c2c" stroke-width="0.5">
+        <g stroke="#f9f6ec" stroke-width="0.5">
           <path d="M50 0 L50 100" />
           <path d="M0 100 Q50 0 100 100" />
           <path d="M10 100 Q50 20 90 100" />
@@ -15,9 +15,9 @@
       </svg>
     </div>
 
-    <!-- Séparateur vague -->
+    <!-- Vague inversée (vers le haut) -->
     <svg
-      class="w-full h-16 md:h-24 text-[#d18181] opacity-30"
+      class="w-full h-16 md:h-24 text-[#f9f6ec] rotate-180"
       viewBox="0 0 1440 320"
       preserveAspectRatio="none"
       fill="currentColor"

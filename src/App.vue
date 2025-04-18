@@ -6,7 +6,7 @@
       <section id="about"><About /></section>
       <Separator />
       <section id="gallery"><Gallery /></section>
-      <Separator />
+      <SeparatorInv />
       <section id="reserve"><Reserve /></section>
       <Separator />
       <section id="contact"><Contact /></section>
@@ -19,6 +19,7 @@
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Separator from "./components/Separator.vue";
+import SeparatorInv from "./components/SeparatorInv.vue";
 import About from "./views/About.vue";
 import Gallery from "./views/Gallery.vue";
 import Reserve from "./views/Reserve.vue";
