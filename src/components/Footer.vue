@@ -41,7 +41,7 @@
       <p>Propulsé par</p>
       <a href="https://google.ca" target="_blank" rel="noopener noreferrer">
         <img
-          src="/\public\images\logos\CWeb-pink.png"
+          src="/\public\images\logos\CWeb-gray.png"
           alt="Personal Logo"
           class="mx-auto w-24 mt-2"
         />

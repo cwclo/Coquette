@@ -1,7 +1,7 @@
 <template>
   <div class="scroll-smooth bg-gray-300 text-[#2c2c2c]">
     <Header />
-    <div class="hidden lg:block h-32 bg-gray-300"></div>
+    <div class="hidden lg:block h-24 bg-gray-300"></div>
     <main>
       <section id="about"><About /></section>
       <Separator />
