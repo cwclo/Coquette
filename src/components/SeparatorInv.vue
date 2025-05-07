@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-[#d7d0b4] overflow-hidden">
+  <div class="relative bg-[#d18181] overflow-hidden fade-mask-inverse">
     <!-- Motif déco art déco inversé -->
     <div
       class="absolute inset-0 flex justify-center items-center pointer-events-none opacity-10 rotate-180"
@@ -15,9 +15,9 @@
       </svg>
     </div>
 
-    <!-- Vague inversée (vers le haut) -->
+    <!-- Vague inversée -->
     <svg
-      class="w-full h-16 md:h-24 text-[#f9f6ec] rotate-180"
+      class="w-full h-16 md:h-24 text-[#f9f6ec] opacity-30 rotate-180"
       viewBox="0 0 1440 320"
       preserveAspectRatio="none"
       fill="currentColor"
@@ -35,8 +35,25 @@
 svg path {
   transition: transform 0.5s ease-in-out;
 }
-
 svg:hover path {
   transform: scaleY(1.03);
+}
+
+/* 💡 Masque inversé pour effet fondu miroir */
+.fade-mask-inverse {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
 }
 </style>

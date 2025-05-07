@@ -6,10 +6,16 @@
       <section id="about"><About /></section>
       <Separator />
       <section id="gallery"><Gallery /></section>
-      <SeparatorInv />
+      <Separator :inverse="true" />
       <section id="reserve"><Reserve /></section>
       <Separator />
       <section id="contact"><Contact /></section>
+      <Separator
+        :inverse="false"
+        bgColor="#2c2c2c"
+        waveColor="#f9f6ec"
+        strokeColor="#d7d0b4"
+      />
     </main>
     <Footer />
   </div>
