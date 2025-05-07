@@ -37,7 +37,8 @@ jobs:
           if [[ "$DEPLOYMENT_STATUS" != "success" ]]; then
             echo "Vercel deployment preview failed or not successful. Exiting."
             exit 1
-          fi      - name: Enable auto-merge
+          fi
+      - name: Enable auto-merge
         if: github.event.pull_request.user.login == 'dependabot[bot]'
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
