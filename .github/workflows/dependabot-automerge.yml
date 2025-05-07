@@ -18,6 +18,8 @@ jobs:
   enable-auto-merge:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
       - name: Check for merge conflicts
         id: conflicts
         run: |
@@ -27,14 +29,15 @@ jobs:
           fi
       - name: Check Vercel deployment status
         id: vercel-status
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           DEPLOYMENT_STATUS=$(gh api repos/${{ github.repository }}/deployments \
             --jq '.[] | select(.environment == "preview") | .statuses[0].state' | head -n 1)
           if [[ "$DEPLOYMENT_STATUS" != "success" ]]; then
             echo "Vercel deployment preview failed or not successful. Exiting."
             exit 1
-          fi
-      - name: Enable auto-merge
+          fi      - name: Enable auto-merge
         if: github.event.pull_request.user.login == 'dependabot[bot]'
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
