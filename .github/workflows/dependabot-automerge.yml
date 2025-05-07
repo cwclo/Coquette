@@ -18,6 +18,9 @@ jobs:
   enable-auto-merge:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Enable auto-merge
         if: github.event.pull_request.user.login == 'dependabot[bot]'
         uses: peter-evans/enable-pull-request-automerge@v3
