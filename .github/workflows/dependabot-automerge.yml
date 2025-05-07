@@ -18,6 +18,13 @@ jobs:
   enable-auto-merge:
     runs-on: ubuntu-latest
     steps:
+      - name: Check for merge conflicts
+        id: conflicts
+        run: |
+          if [[ "$(git ls-files -u | wc -l)" -ne 0 ]]; then
+            echo "Merge conflicts detected. Exiting."
+            exit 1
+          fi
       - name: Enable auto-merge
         if: github.event.pull_request.user.login == 'dependabot[bot]'
         uses: peter-evans/enable-pull-request-automerge@v3
