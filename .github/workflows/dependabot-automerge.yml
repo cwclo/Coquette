@@ -55,4 +55,9 @@ jobs:
               console.log("✅ PR auto-merged.");
             } else {
               console.log("⛔️ Not safe to merge yet. Either conflicts, CI not done, or failed.");
+              console.log("🔍 Individual status checks:");
+              status.data.statuses.forEach(s => {
+                console.log(`• ${s.context}: ${s.state}`);
+              });
+
             }
