@@ -9,8 +9,8 @@ on:
       - ready_for_review
 
 permissions:
-  pull-requests: write
   contents: write
+  pull-requests: write
   statuses: read
   checks: read
 
@@ -22,59 +22,32 @@ jobs:
     steps:
       - uses: actions/github-script@v7
         with:
-          retries: 3
           script: |
-            async function wait(ms) {
-              return new Promise(resolve => setTimeout(resolve, ms));
+            const pr = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number
+            });
+
+            const headSha = pr.data.head.sha;
+            const mergeable = pr.data.mergeable;
+
+            const status = await github.rest.repos.getCombinedStatusForRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: headSha
+            });
+
+            const allChecksPass = status.data.state === "success";
+
+            if (mergeable && allChecksPass) {
+              await github.rest.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.data.number,
+                merge_method: "squash"
+              });
+              console.log("✅ Auto-merged by Dependabot script.");
+            } else {
+              console.log("⛔ Not safe to merge. Skipping.");
             }
-
-            async function checkAndMerge() {
-              let attempts = 3;
-              let delay = 10000; // 10 seconds
-
-              for (let i = 1; i <= attempts; i++) {
-                const pr = await github.rest.pulls.get({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  pull_number: context.payload.pull_request.number
-                });
-
-                const { mergeable, mergeable_state, number: prNumber, head } = pr.data;
-
-                console.log(`Attempt ${i}:`);
-                console.log("Mergeable:", mergeable);
-                console.log("Mergeable State:", mergeable_state);
-
-                const status = await github.rest.repos.getCombinedStatusForRef({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  ref: head.sha
-                });
-
-                const allChecksPass = status.data.state === "success";
-                console.log("Status checks state:", status.data.state);
-                status.data.statuses.forEach(s => {
-                  console.log(`• ${s.context}: ${s.state}`);
-                });
-
-                if (mergeable && mergeable_state === "clean" && allChecksPass) {
-                  await github.rest.pulls.merge({
-                    owner: context.repo.owner,
-                    repo: context.repo.repo,
-                    pull_number: prNumber,
-                    merge_method: "squash"
-                  });
-                  console.log("✅ PR auto-merged.");
-                  return;
-                }
-
-                if (i < attempts) {
-                  console.log(`⏳ Not ready yet. Waiting ${delay / 1000}s before retrying...`);
-                  await wait(delay);
-                }
-              }
-
-              console.log("⛔️ Not safe to merge after retries.");
-            }
-
-            await checkAndMerge();
