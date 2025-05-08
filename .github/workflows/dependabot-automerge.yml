@@ -6,11 +6,19 @@ on:
       - labeled
       - synchronize
       - opened
+      - ready_for_review
+
+permissions:
+  pull-requests: write
+  contents: write
+  statuses: read
+  checks: read
 
 jobs:
   automerge:
     if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/github-script@v7
         with:
@@ -21,20 +29,29 @@ jobs:
               pull_number: context.payload.pull_request.number
             });
 
-            const mergeable = pr.data.mergeable;
-            const mergeable_state = pr.data.mergeable_state;
+            const { mergeable, mergeable_state, number: prNumber, head } = pr.data;
 
             console.log("Mergeable:", mergeable);
             console.log("Mergeable State:", mergeable_state);
 
-            if (mergeable && mergeable_state === "clean") {
+            // Get combined status for the HEAD commit
+            const status = await github.rest.repos.getCombinedStatusForRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: head.sha
+            });
+
+            const allChecksPass = status.data.state === "success";
+            console.log("Status checks state:", status.data.state);
+
+            if (mergeable && mergeable_state === "clean" && allChecksPass) {
               await github.rest.pulls.merge({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                pull_number: pr.data.number,
+                pull_number: prNumber,
                 merge_method: "squash"
               });
-              console.log("✅ PR merged.");
+              console.log("✅ PR auto-merged.");
             } else {
-              console.log("⛔️ Not safe to merge (conflict or checks not passing).");
+              console.log("⛔️ Not safe to merge yet. Either conflicts, CI not done, or failed.");
             }
