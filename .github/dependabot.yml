@@ -8,6 +8,5 @@ updates:
       prefix: "fix(deps):"
     target-branch: "develop"
     rebase-strategy: auto
-    automerge: false
     labels:
       - "dependencies"
