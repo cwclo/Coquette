@@ -24,7 +24,7 @@
         <div
           class="w-16 h-px bg-[#d18181] group-hover:w-20 transition-all duration-300"
         ></div>
-        <span class="text-[#d18181]">Votre table</span>
+        <span class="text-[#d18181] whitespace-nowrap">Votre table</span>
         <div
           class="flex items-center gap-2 transition-all duration-300 group-hover:gap-3"
         >
