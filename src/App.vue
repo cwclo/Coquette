@@ -18,16 +18,34 @@
       />
     </main>
     <Footer />
+
+    <!-- Bouton retour en haut -->
+    <ScrollToTop />
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Separator from "./components/Separator.vue";
-import SeparatorInv from "./components/SeparatorInv.vue";
 import About from "./views/About.vue";
 import Gallery from "./views/Gallery.vue";
 import Reserve from "./views/Reserve.vue";
 import Contact from "./views/Contact.vue";
+import ScrollToTop from "./components/ScrollToTop.vue";
+
+const showScrollTop = ref(false);
+
+function handleScroll() {
+  showScrollTop.value = window.scrollY > 300;
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+onMounted(() => window.addEventListener("scroll", handleScroll));
+onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 </script>
