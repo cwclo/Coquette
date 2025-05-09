@@ -1,7 +1,7 @@
 <template>
   <section id="gallery" class="px-6 pt-8 pb-20 md:px-12">
     <h2
-      class="text-3xl md:text-4xl font-bold text-white text-center mb-12 section-scroll-offset"
+      class="text-3xl md:text-5xl font-bold text-white text-center mb-12 section-scroll-offset"
     >
       GALERIE
     </h2>
