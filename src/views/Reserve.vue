@@ -11,14 +11,10 @@
     >
       <!-- Titre Réservez avec effet de remplissage -->
       <h2
-        class="relative text-5xl md:text-7xl font-title tracking-wide mb-8 inline-block overflow-visible leading-[1.2]"
+        class="relative inline-block text-5xl md:text-7xl font-title tracking-wide mb-8 leading-tight"
       >
-        <span class="text-outline">Réservez</span>
-        <span
-          class="text-fill absolute top-0 left-0 w-full h-[120%] group-hover:clip-visible"
-        >
-          Réservez
-        </span>
+        <span class="text-outline absolute inset-0">Réservez</span>
+        <span class="text-fill relative">Réservez</span>
       </h2>
 
       <!-- Sous-texte stylisé -->
@@ -62,22 +58,25 @@
 .text-outline {
   color: transparent;
   -webkit-text-stroke: 1px #d18181;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
   z-index: 1;
+  pointer-events: none;
 }
 
 .text-fill {
   color: #d18181;
-  clip-path: inset(
-    100% 0 0 0 round 0
-  ); /* Initialement caché, mais avec un peu de marge */
+  clip-path: inset(100% 0 0 0 round 0);
   transition: clip-path 1.2s ease-in-out;
   z-index: 2;
-  line-height: 1.2; /* Important si pas déjà défini */
 }
 
 .group:hover .text-fill {
-  clip-path: inset(0 0 0 0 round 0); /* Révèle tout */
+  clip-path: inset(0 0 0 0 round 0);
 }
 
 @media (hover: none) {
