@@ -20,11 +20,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden; 
   }
 
   body {
     font-family: 'Bellefair', serif;
     color: #2c2c2c;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {

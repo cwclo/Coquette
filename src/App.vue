@@ -1,9 +1,9 @@
 <template>
-  <div class="scroll-smooth bg-gray-300 text-[#2c2c2c]">
+  <div class="scroll-smooth bg-gray-300 text-[#2c2c2c] overflow-x-hidden">
     <Header />
     <div class="hidden lg:block h-24 bg-gray-300"></div>
     <main>
-      <section id="about"><About /></section>
+      <section id="about" class="scroll-mt-24"><About /></section>
       <Separator />
       <section id="gallery"><Gallery /></section>
       <Separator :inverse="true" />

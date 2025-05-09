@@ -25,25 +25,19 @@
       /></a>
       <a href="#"
         ><img
-          src="/images/icon-twitter.svg"
-          alt="Twitter"
-          class="hover:brightness-150"
-      /></a>
-      <a href="#"
-        ><img
           src="/images/icon-pinterest.svg"
           alt="Pinterest"
           class="hover:brightness-150"
       /></a>
     </div>
     <!-- Personal Logo -->
-    <div class="mt-6">
+    <div class="mt-5">
       <p>Propulsé par</p>
       <a href="https://google.ca" target="_blank" rel="noopener noreferrer">
         <img
           src="/\public\images\logos\CWeb-gray.png"
-          alt="Personal Logo"
-          class="mx-auto w-24 mt-2"
+          alt="CWeb"
+          class="mx-auto w-20"
         />
       </a>
     </div>
