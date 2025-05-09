@@ -42,4 +42,7 @@
     padding-top: 6rem; /* pt-24 = 6rem */
     scroll-margin-top: 6rem; /* scroll-mt-24 = 6rem */
   }
+  .scroll-anchor-tight {
+    scroll-margin-top: 4.5rem;
+  }
 }

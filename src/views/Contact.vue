@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="bg-[#f9f6ec] px-6 py-24 md:px-12">
+  <section id="contact" class="bg-gray-300 px-6 py-24 md:px-12">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-start">
       <!-- Colonne gauche -->
       <div

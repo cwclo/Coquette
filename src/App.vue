@@ -1,20 +1,45 @@
 <template>
-  <div class="scroll-smooth bg-gray-300 text-[#2c2c2c] overflow-x-hidden">
+  <div class="scroll-smooth bg-gray-400 text-[#2c2c2c] overflow-x-hidden">
     <Header />
-    <div class="hidden lg:block h-24 bg-gray-300"></div>
+    <div class="hidden lg:block h-24"></div>
     <main>
       <section id="about" class="scroll-mt-24"><About /></section>
-      <Separator />
-      <section id="gallery"><Gallery /></section>
-      <Separator :inverse="true" />
+      <Separator
+        :inverse="false"
+        bgColor="#f9f6ec"
+        waveColor="#d18181"
+        strokeColor="#2c2c2c"
+        :waveSpeed="10"
+        :waveAmplitude="50"
+      />
+      <section class="scroll-mt-20"><Gallery /></section>
+      <Separator
+        :inverse="false"
+        bgColor="#f9f6ec"
+        waveColor="#d18181"
+        strokeColor="#2c2c2c"
+        :waveSpeed="10"
+        :waveAmplitude="50"
+      />
+
       <section id="reserve"><Reserve /></section>
-      <Separator />
+      <Separator
+        :inverse="false"
+        bgColor="#f9f6ec"
+        waveColor="#d18181"
+        strokeColor="#2c2c2c"
+        :waveSpeed="10"
+        :waveAmplitude="50"
+      />
+
       <section id="contact"><Contact /></section>
       <Separator
         :inverse="false"
-        bgColor="#2c2c2c"
-        waveColor="#f9f6ec"
-        strokeColor="#d7d0b4"
+        bgColor="#f9f6ec"
+        waveColor="#d18181"
+        strokeColor="#2c2c2c"
+        :waveSpeed="10"
+        :waveAmplitude="50"
       />
     </main>
     <Footer />
