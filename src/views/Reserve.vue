@@ -1,7 +1,7 @@
 <template>
   <section
     id="reserve"
-    class="relative px-6 py-24 md:px-12 text-center bg-[#2c2c2c] text-[#d7d0b4]"
+    class="relative px-6 py-24 md:px-12 text-center bg-black/80 text-[#d7d0b4]"
   >
     <a
       href="https://www.opentable.ca/"

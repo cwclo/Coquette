@@ -1,23 +1,24 @@
 <template>
-  <div class="scroll-smooth bg-gray-400 text-[#2c2c2c] overflow-x-hidden">
+  <div class="scroll-smooth bg-black/80 text-[#2c2c2c] overflow-x-hidden">
     <Header />
     <div class="hidden lg:block h-24"></div>
     <main>
       <section id="about" class="scroll-mt-24"><About /></section>
       <Separator
         :inverse="false"
-        bgColor="#f9f6ec"
+        bgColor="#2c2c2c"
         waveColor="#d18181"
-        strokeColor="#2c2c2c"
+        strokeColor="#d7d0b4"
         :waveSpeed="10"
         :waveAmplitude="50"
       />
+
       <section class="scroll-mt-20"><Gallery /></section>
       <Separator
         :inverse="false"
-        bgColor="#f9f6ec"
+        bgColor="#2c2c2c"
         waveColor="#d18181"
-        strokeColor="#2c2c2c"
+        strokeColor="#d7d0b4"
         :waveSpeed="10"
         :waveAmplitude="50"
       />
@@ -25,26 +26,16 @@
       <section id="reserve"><Reserve /></section>
       <Separator
         :inverse="false"
-        bgColor="#f9f6ec"
+        bgColor="#2c2c2c"
         waveColor="#d18181"
-        strokeColor="#2c2c2c"
+        strokeColor="#ffffff"
         :waveSpeed="10"
         :waveAmplitude="50"
       />
 
       <section id="contact"><Contact /></section>
-      <Separator
-        :inverse="false"
-        bgColor="#f9f6ec"
-        waveColor="#d18181"
-        strokeColor="#2c2c2c"
-        :waveSpeed="10"
-        :waveAmplitude="50"
-      />
     </main>
     <Footer />
-
-    <!-- Bouton retour en haut -->
     <ScrollToTop />
   </div>
 </template>
