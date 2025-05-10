@@ -19,6 +19,14 @@
         strokeColor="#d7d0b4"
       />
 
+      <section class="scroll-mt-20"><Menu /></section>
+      <Separator
+        :inverse="false"
+        bgColor="black"
+        waveColor="#d18181"
+        strokeColor="#d7d0b4"
+      />
+
       <section id="reserve"><Reserve /></section>
       <Separator
         :inverse="false"
@@ -45,6 +53,7 @@ import Gallery from "./views/Gallery.vue";
 import Reserve from "./views/Reserve.vue";
 import Contact from "./views/Contact.vue";
 import ScrollToTop from "./components/ScrollToTop.vue";
+import Menu from "./views/Menu.vue";
 
 const showScrollTop = ref(false);
 

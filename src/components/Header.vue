@@ -37,6 +37,7 @@
       >
         Nous joindre
       </NavLink>
+      <NavLink href="#menu">Menu</NavLink>
     </nav>
 
     <!-- Hamburger -->
@@ -81,6 +82,8 @@
           <!-- <NavLink href="#about" @click="closeMenu">À propos</NavLink> -->
           <NavLink href="#gallery" @click="closeMenu">Galerie</NavLink>
           <NavLink href="#reserve" @click="closeMenu">Réserver</NavLink>
+          <NavLink href="#menu">Menu</NavLink>
+
           <a
             href="#contact"
             @click="closeMenu"
