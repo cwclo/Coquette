@@ -7,7 +7,7 @@
       href="https://www.opentable.ca/"
       target="_blank"
       rel="noopener"
-      class="group block max-w-5xl mx-auto cursor-pointer select-none transition duration-300 hover:bg-[#d18181]/10 active:bg-[#d18181]/20 rounded-lg p-4 hover:ring-1 ring-[#d18181] ring-offset-2"
+      class="group block max-w-5xl mx-auto cursor-pointer select-none transition duration-300 rounded-lg p-4 border border-[#d18181] bg-[#d18181]/5 hover:bg-[#d18181]/10 active:bg-[#d18181]/20 md:border-transparent md:bg-transparent"
     >
       <!-- Titre Réservez avec effet de remplissage -->
       <h2

@@ -6,17 +6,37 @@
     <img
       src="/images/logos/coquette_logo_rose.png"
       alt="Logo Coquette"
-      class="w-14 md:w-16 h-auto object-contain"
+      class="w-12 md:w-16 lg:w-20 xl:w-24 h-auto object-contain transition-all duration-300"
     />
 
     <!-- Desktop Nav -->
     <nav
-      class="hidden md:flex space-x-8 items-center font-semibold text-sm md:text-base text-[#2c2c2c]"
+      class="hidden md:flex items-center space-x-8 md:space-x-10 lg:space-x-14 xl:space-x-16 text-[#d18181] tracking-wide"
     >
-      <NavLink href="#about">À propos</NavLink>
-      <NavLink href="#gallery">Galerie</NavLink>
-      <NavLink href="#reserve">Réserver</NavLink>
-      <NavLink href="#contact">Nous joindre</NavLink>
+      <!-- <NavLink
+        href="#about"
+        class="text-base md:text-lg lg:text-2xl xl:text-3xl"
+      >
+        À propos
+      </NavLink> -->
+      <NavLink
+        href="#gallery"
+        class="text-base md:text-lg lg:text-2xl xl:text-3xl"
+      >
+        Galerie
+      </NavLink>
+      <NavLink
+        href="#reserve"
+        class="text-base md:text-lg lg:text-2xl xl:text-3xl"
+      >
+        Réserver
+      </NavLink>
+      <NavLink
+        href="#contact"
+        class="text-base md:text-lg lg:text-2xl xl:text-3xl"
+      >
+        Nous joindre
+      </NavLink>
     </nav>
 
     <!-- Hamburger -->
@@ -58,7 +78,7 @@
           </button>
 
           <!-- Mobile NavLinks -->
-          <NavLink href="#about" @click="closeMenu">À propos</NavLink>
+          <!-- <NavLink href="#about" @click="closeMenu">À propos</NavLink> -->
           <NavLink href="#gallery" @click="closeMenu">Galerie</NavLink>
           <NavLink href="#reserve" @click="closeMenu">Réserver</NavLink>
           <a
@@ -97,7 +117,6 @@ function handleEscape(event) {
 onMounted(() => {
   window.addEventListener("keydown", handleEscape);
 });
-
 onUnmounted(() => {
   window.removeEventListener("keydown", handleEscape);
 });
