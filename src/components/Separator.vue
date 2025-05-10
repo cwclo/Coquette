@@ -21,7 +21,7 @@
     <!-- Vague animée -->
     <div class="overflow-hidden h-24 relative">
       <svg
-        class="w-[200%] h-full animated-wave opacity-30"
+        class="w-[200%] h-full animated-wave"
         viewBox="0 0 2880 320"
         preserveAspectRatio="none"
         :class="inverse ? 'rotate-180' : ''"
@@ -29,6 +29,7 @@
           color: waveColor,
           animationDuration: waveSpeed + 's',
           '--amplitude': '-' + waveAmplitude + '%',
+          opacity: 0.8, // ou 1 si tu veux sa vraie couleur
         }"
         fill="currentColor"
       >

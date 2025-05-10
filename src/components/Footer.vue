@@ -1,9 +1,9 @@
 <template>
-  <footer class="bg-gray-300 text-[#2c7566] text-center py-10">
+  <footer class="bg-black text-[#d18181] text-center py-10">
     <!-- Logo -->
     <div class="mb-4">
       <img
-        src="/images/logos/coquette_logo_noir.png"
+        src="/images/logos/coquette_logo_beige_cmyk.png"
         alt="Sunnyside Logo"
         class="mx-auto w-32 fill-current"
       />
@@ -35,7 +35,7 @@
       <p>Propulsé par</p>
       <a href="https://google.ca" target="_blank" rel="noopener noreferrer">
         <img
-          src="/\public\images\logos\CWeb-gray.png"
+          src="/\public\images\logos\CWeb-pink.png"
           alt="CWeb"
           class="mx-auto w-20"
         />

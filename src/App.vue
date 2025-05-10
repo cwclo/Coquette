@@ -6,31 +6,25 @@
       <section id="about" class="scroll-mt-24"><About /></section>
       <Separator
         :inverse="false"
-        bgColor="#2c2c2c"
+        bgColor="black"
         waveColor="#d18181"
         strokeColor="#d7d0b4"
-        :waveSpeed="10"
-        :waveAmplitude="50"
       />
 
       <section class="scroll-mt-20"><Gallery /></section>
       <Separator
         :inverse="false"
-        bgColor="#2c2c2c"
+        bgColor="black"
         waveColor="#d18181"
         strokeColor="#d7d0b4"
-        :waveSpeed="10"
-        :waveAmplitude="50"
       />
 
       <section id="reserve"><Reserve /></section>
       <Separator
         :inverse="false"
-        bgColor="#2c2c2c"
+        bgColor="black"
         waveColor="#d18181"
-        strokeColor="#ffffff"
-        :waveSpeed="10"
-        :waveAmplitude="50"
+        strokeColor="#d7d0b4"
       />
 
       <section id="contact"><Contact /></section>

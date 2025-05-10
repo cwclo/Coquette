@@ -1,6 +1,6 @@
 <template>
   <header
-    class="sticky top-0 left-0 w-full z-50 px-4 md:px-8 py-3 md:py-4 flex justify-between items-center bg-black/80 backdrop-blur-lg shadow-md"
+    class="sticky top-0 left-0 w-full z-50 px-4 md:px-8 py-3 md:py-4 flex justify-between items-center bg-black backdrop-blur-lg shadow-md"
   >
     <!-- Logo -->
     <img
