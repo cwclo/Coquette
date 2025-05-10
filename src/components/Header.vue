@@ -37,7 +37,9 @@
       >
         Nous joindre
       </NavLink>
-      <NavLink href="#menu">Menu</NavLink>
+      <NavLink href="#menu" class="text-base md:text-lg lg:text-2xl xl:text-3xl"
+        >Menu</NavLink
+      >
     </nav>
 
     <!-- Hamburger -->
